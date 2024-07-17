@@ -22,6 +22,10 @@ Route::get('/', function () {
 // Rotas de Gestão de Estoque
 Route::prefix('gestao/estoque')->group(function () {
     Route::get('/', [EstoqueController::class, 'index'])->name('gestao-estoque');
+    
+    Route::get('/cadastro-produto-form', [EstoqueController::class, 'cadastroProdutosForm'])->name('gestao-estoque-cadastro-produto-form');
+    Route::post('/cadastro-produto', [EstoqueController::class, 'cadastroProdutos'])->name('gestao-estoque-cadastro-produto');
+    
     Route::get('/estoque-baixo', [EstoqueController::class, 'estoqueBaixo'])->name('gestao-estoque-estoque-baixo');
     Route::get('/controle-qualidade', [EstoqueController::class, 'controleQualidade'])->name('gestao-estoque-controle-qualidade');
     Route::get('/historico-movimentacao', [EstoqueController::class, 'historicoMovimentacao'])->name('ge-historico-movimentacao');

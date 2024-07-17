@@ -125,7 +125,7 @@
     </div>
     <div class="content">
         <div class="btn-container">
-            <a href="#" class="btn btn-custom btn-green">
+            <a href="{{ route('gestao-estoque-cadastro-produto-form') }}" class="btn btn-custom btn-green">
                 📦 Cadastro de Produtos
             </a>
             <a href="{{ route('gestao-estoque-controle-qualidade') }}" class="btn btn-custom btn-green">
