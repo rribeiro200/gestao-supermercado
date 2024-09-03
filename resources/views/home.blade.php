@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <div class="btn-group">
-                    <a href="#" class="btn btn-custom">Cadastro de Pedidos</a>
+                    <a href="{{ route('cadastro-pedido-form')}}" class="btn btn-custom">Cadastro de Pedidos</a>
                     <a href="{{ route('status-pedidos') }}" class="btn btn-custom">Status de Pedidos</a>
                     <a href="#" class="btn btn-custom">Relatórios de Vendas</a>
                 </div>

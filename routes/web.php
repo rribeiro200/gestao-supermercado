@@ -34,6 +34,10 @@ Route::prefix('gestao/estoque')->group(function () {
 // Rota de Gestão de Delivery
 Route::prefix('gestao/delivery')->group(function () {
     Route::get('/', [DeliveryController::class, 'index'])->name('gestao-delivery');
+    
+    Route::get('/cadastroPedidoForm', [DeliveryController::class, 'cadastroPedidoForm'])->name('cadastro-pedido-form');
+    Route::post('/cadastroPedido', [DeliveryController::class, 'cadastroPedido'])->name('cadastro-pedido');
+
     Route::get('/statusPedido', [DeliveryController::class, 'statusPedido'])->name('status-pedidos');
     Route::get('/detalhesPedido', [DeliveryController::class, 'detalhesPedido'])->name('detalhes-pedido');
 });

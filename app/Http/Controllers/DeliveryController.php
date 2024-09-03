@@ -20,4 +20,14 @@ class DeliveryController extends Controller
     {
         return view('gestao-delivery.detalhes-pedido');
     }
+
+    public function cadastroPedidoForm()
+    {
+        return view('gestao-delivery.cadastro-pedido-form');
+    }
+
+    public function cadastroPedido()
+    {
+        echo "Olá";
+    }
 }
